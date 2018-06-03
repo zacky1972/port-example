@@ -1,4 +1,4 @@
-defmodule PortExapmle do
+defmodule PortExample do
   @moduledoc """
   Documentation for PortExapmle.
   """
@@ -8,7 +8,7 @@ defmodule PortExapmle do
 
   ## Examples
 
-      iex> PortExapmle.hello
+      iex> PortExample.hello
       :world
 
   """

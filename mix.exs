@@ -3,12 +3,21 @@ defmodule PortExapmle.MixProject do
 
   def project do
     [
-      app: :port_exapmle,
+      app: :port_example,
       version: "0.1.0",
       elixir: "~> 1.6",
+      compilers: [:rustler] ++ Mix.compilers,
+      rustler_crates: rustler_crates(),
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
+  end
+
+  defp rustler_crates() do
+    [port_example: [
+      path: "native/port_example",
+      mode: :release,
+    ]]
   end
 
   # Run "mix help compile.app" to learn about applications.
